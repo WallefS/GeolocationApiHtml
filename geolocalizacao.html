@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pegando GeoLocalização</title>
+</head>
+<body>
+
+	<p>Click no Botão para pegar sua coordernada</p>
+	<button onclick="getLocation()">Pegar</button>
+	
+	<p id="show"></p>
+
+	<script>
+
+		var x = document.getElementById("show");
+
+		function getLocation(){
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			}else{
+
+				x.innerHTML = "Geolocation is not supported by this browser";
+			}
+		}
+
+		function showPosition(position){
+			x.innerHTML = "Latitude: " + position.coords.latitude + 
+			"<br>Longitude: " + position.coords.longitude;
+		}
+		
+	</script>
+
+</body>
+</html>
