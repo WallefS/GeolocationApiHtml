@@ -5,6 +5,7 @@
 </head>
 <body>
 	<p>Click no Botão para pegar sua coordernada</p>
+
 	<button onclick="getLocation()">Pegar</button>
 	
 	<p id="show"></p>
@@ -18,7 +19,7 @@
 				navigator.geolocation.getCurrentPosition(showPosition);
 			}else{
 
-				x.innerHTML = "Geolocation is not supported by this browser";
+				x.innerHTML = "GeoLocalização não suportada no browser";
 			}
 		}
 
