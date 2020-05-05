@@ -6,7 +6,7 @@
 <body>
 	<p>Click no Botão para pegar sua coordernada</p>
 
-	<button onclick="getLocation()">Pegar</button>
+	<button onclick="getLocation()">Click Aqui</button>
 	
 	<p id="show"></p>
 
@@ -15,8 +15,10 @@
 		var x = document.getElementById("show");
 
 		function getLocation(){
+
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(showPosition);
+
 			}else{
 
 				x.innerHTML = "GeoLocalização não suportada no browser";
@@ -24,6 +26,7 @@
 		}
 
 		function showPosition(position){
+
 			x.innerHTML = "Latitude: " + position.coords.latitude + 
 			"<br>Longitude: " + position.coords.longitude;
 		}
